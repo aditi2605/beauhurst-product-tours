@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="en" class="h-full scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beauhurst — Homepage Concept</title>
+
+    <!-- Lucide Icons -->
+     <script src="https://unpkg.com/lucide@latest"></script>
+
+     <!-- FontAwesome Icons -->
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      />
+
+
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: "#0B1220",
+              bg: "#070A14",
+              card: "rgba(255,255,255,0.08)",
+              line: "rgba(255,255,255,0.12)",
+              primary: { DEFAULT: "#6D5EF6", hover: "#5B4EE6" },
+              teal: "#19C3A6",
+              amber: "#FFB020",
+              impact: "#4B83FF",
+              invest: "#24C26A",
+              advise: "#D14BB7",
+              sales: "#FF4D4D",
+            },
+            boxShadow: {
+              glow: "0 0 0 1px rgba(255,255,255,0.08), 0 20px 50px rgba(0,0,0,0.6)",
+              soft: "0 0 0 1px rgba(255,255,255,0.08), 0 18px 40px rgba(0,0,0,0.5)",
+              button: "0 8px 24px rgba(109,94,246,0.35)",
+            },
+            fontFamily: {
+              sans: ["ui-sans-serif", "system-ui", "Inter", "Segoe UI", "Roboto", "Arial", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Optional: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+      :root { color-scheme: dark; }
+
+      .glass {
+        background: rgba(10, 14, 35, 0.55);
+        border: 1px solid rgba(255,255,255,0.10);
+        box-shadow: 0 20px 60px rgba(0,0,0,0.55);
+        backdrop-filter: blur(14px);
+      }
+      .glass-soft {
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,255,255,0.10);
+        backdrop-filter: blur(14px);
+      }
+
+      .halo {
+        position: absolute;
+        inset: -200px;
+        pointer-events: none;
+        background:
+          radial-gradient(closest-side at 30% 40%, rgba(109,94,246,0.25), transparent 62%),
+          radial-gradient(closest-side at 70% 30%, rgba(25,195,166,0.16), transparent 60%),
+          radial-gradient(closest-side at 50% 75%, rgba(255,176,32,0.08), transparent 60%);
+        filter: blur(18px);
+        opacity: 0.9;
+        animation: drift 16s ease-in-out infinite alternate;
+      }
+      @keyframes drift {
+        from { transform: translate3d(-10px, -10px, 0) scale(1); }
+        to   { transform: translate3d(10px, 12px, 0) scale(1.02); }
+      }
+
+      .stars {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background-image:
+          radial-gradient(1px 1px at 10% 15%, rgba(255,255,255,0.28) 40%, transparent 42%),
+          radial-gradient(1px 1px at 35% 60%, rgba(255,255,255,0.24) 40%, transparent 42%),
+          radial-gradient(1px 1px at 70% 25%, rgba(255,255,255,0.20) 40%, transparent 42%),
+          radial-gradient(1px 1px at 85% 70%, rgba(255,255,255,0.18) 40%, transparent 42%),
+          radial-gradient(1px 1px at 55% 35%, rgba(255,255,255,0.14) 40%, transparent 42%);
+        opacity: 0.55;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(10px);
+        transition: opacity 520ms ease, transform 520ms ease;
+      }
+      .reveal.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .halo { animation: none; }
+        .reveal { transition: none; transform: none; opacity: 1; }
+      }
+
+      @keyframes scroll {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-50%);
+        }
+        }
+
+        .animate-scroll {
+        animation: scroll 30s linear infinite;
+        }
+
+    </style>
+  </head>
+
+  <body class="h-full bg-[#050814] text-white font-sans">
+    <!-- HERO BACKDROP -->
+    <div class="relative overflow-hidden">
+      <div class="absolute inset-0">
+        <div class="absolute inset-0 bg-gradient-to-b from-[#0B1028] via-[#070A14] to-[#050814]"></div>
+        <div class="halo"></div>
+        <div class="stars"></div>
+
+        <!-- Subtle abstract block -->
+        <div class="absolute right-[-120px] top-[-40px] h-[520px] w-[520px] opacity-35 blur-[0.5px]"
+             style="background:
+               linear-gradient(to bottom, rgba(255,255,255,0.08), transparent 70%),
+               radial-gradient(closest-side, rgba(109,94,246,0.20), transparent 60%); border-radius: 28px;">
+        </div>
+      </div>
+
+      <!-- NAV (your preferred navbar style) -->
+      <header id="siteHeader" class="sticky top-0 z-50">
+        <div class="mx-auto max-w-6xl px-4 pt-4">
+          <div id="navShell" class="glass rounded-2xl px-4 py-3 md:px-5 md:py-4 flex items-center justify-between transition">
+            <div class="flex items-center gap-3">
+              <div class="h-8 w-auto flex items-center justify-center">
+                <image src="/images/Beauhurst_logo.webp" alt="company logo" class="h-full object-contain" />
+              </div>
+            </div>
+
+            <nav class="hidden md:flex items-center gap-6 text-sm text-white/80">
+              <a class="hover:text-white transition" href="#tours">Product tours</a>
+              <a class="hover:text-white transition" href="#services">Products & services</a>
+              <a class="hover:text-white transition" href="#proof">Why us</a>
+              <a class="hover:text-white transition" href="#resources">Resources</a>
+            </nav>
+
+            <div class="flex items-center gap-2">
+              <a href="#" class="hidden sm:inline-flex text-sm text-white/80 hover:text-white transition px-3 py-2 rounded-xl">
+                Sign in
+              </a>
+              <a href="#demo"
+                 class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-4 py-2.5 text-sm font-semibold shadow-button hover:bg-primary-hover transition active:scale-[0.98]">
+                Book a demo
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="opacity-90">
+                  <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- HERO CONTENT -->
+      <section class="relative">
+        <div class="mx-auto max-w-6xl px-4 pt-10 pb-12 md:pt-16 md:pb-16">
+          <div class="text-center">
+            <p class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs text-white/80">
+              <span class="h-2 w-2 rounded-full bg-teal"></span>
+              Verified private company intelligence
+            </p>
+
+
+            <h1 class="mt-6 text-3xl md:text-5xl font-semibold tracking-tight">
+              Private company intelligence
+              <span class="block text-white/90">for the UK &amp; Germany</span>
+            </h1>
+
+            <p class="mx-auto mt-4 max-w-2xl text-base md:text-lg text-white/75">
+              Find opportunities, track companies, and act faster with verified data.
+            </p>
+
+            <div class="mt-7 flex flex-col sm:flex-row items-center justify-center gap-3">
+              <a href="#demo"
+                 class="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3 text-sm font-semibold shadow-button hover:bg-primary-hover transition active:scale-[0.98]">
+                Book a demo
+              </a>
+              <a href="#tours"
+                 class="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white/90 hover:bg-white/10 transition active:scale-[0.98]">
+                Take a virtual tour
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="opacity-80">
+                  <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+
+            <p class="mt-3 text-xs text-white/60">
+              No hard sell — just a tailored walkthrough.
+            </p>
+          </div>
+
+          <!-- Persona selector -->
+          <div class="mt-10 md:mt-12 glass rounded-2xl p-4 md:p-6 reveal">
+            <h2 class="text-center text-sm md:text-base font-semibold text-white/90">
+              What are you here to do?
+            </h2>
+
+            <div id="personaRow" class="mt-4 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+              <!-- Buttons injected by JS -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- MAIN -->
+    <main class="relative">
+      <!-- TOURS cards -->
+      <section id="tours" class="mx-auto max-w-6xl px-4 pt-10 pb-8 md:pt-14">
+        <div class="text-center reveal">
+          <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">See the platform in action</h2>
+          <p id="tourSubtitle" class="mt-2 text-white/70">Pick a goal — we’ll show the right walkthrough.</p>
+          <p id="tourContextLabel" class="mt-12 text-md text-white/50"></p>
+        </div>
+
+        <div id="tourCards" class="mt-8 grid gap-4 md:gap-6 md:grid-cols-3 reveal">
+          <!-- Cards injected from JS -->
+        </div>
+
+        <div class="mt-6 text-center text-sm text-white/70 reveal">
+          Prefer a guided walkthrough?
+          <a href="#demo" class="text-primary hover:underline font-semibold">Book a demo →</a>
+        </div>
+      </section>
+
+      <!-- Our Clients -->
+       <section class="mx-auto max-w-6xl px-4 py-16">
+        <div class="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 md:p-10 reveal">
+
+          <!-- subtle background glow -->
+          <div class="pointer-events-none absolute -top-24 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-primary/10 blur-3xl"></div>
+
+          <!-- Header -->
+          <div class="relative z-10 text-center">
+            <span class="inline-block rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
+              Trusted by industry leaders
+            </span>
+
+            <h2 class="mt-4 text-2xl md:text-3xl font-semibold tracking-tight text-white">
+              Hundreds of teams rely on our data to make better decisions
+            </h2>
+          </div>
+
+          <!-- Logo marquee -->
+          <div class="relative mt-12">
+            <!-- fade edges -->
+            <div class="pointer-events-none absolute left-0 top-0 z-10 h-full w-16 bg-gradient-to-r from-[#0B1220] to-transparent"></div>
+            <div class="pointer-events-none absolute right-0 top-0 z-10 h-full w-16 bg-gradient-to-l from-[#0B1220] to-transparent"></div>
+
+            <div class="overflow-hidden">
+              <div class="animate-scroll flex items-center gap-16 py-6">
+                 <div class="flex items-center justify-center rounded-xl bg-white/90 px-4 py-2 shadow-sm">
+                    <img src="/images/Coutts-Logo.png" class="h-20" />
+                 </div>
+                <div class="flex items-center justify-center rounded-xl bg-white/90 px-4 py-2 shadow-sm">
+                  <img src="/images/jpmorgan-logo.png" class="h-20" />
+                </div>
+                <div class="flex items-center justify-center rounded-xl bg-white/90 px-4 py-2 shadow-sm">
+                  <img src="/images/uk_exportfinance_logo.png" class="h-20" />
+                </div>
+                <div class="flex items-center justify-center rounded-xl bg-white/90 px-4 py-2 shadow-sm">
+                  <img src="/images/lancashire_council_logo.png" class="h-20" />
+                </div>
+                <div class="flex items-center justify-center rounded-xl bg-white/90 px-4 py-2 shadow-sm">
+                  <img src="/images/Puma_GrowthPartners_logo.png" class="h-20" />
+                </div>
+                <div class="flex items-center justify-center rounded-xl bg-white/90 px-4 py-2 shadow-sm">
+                  <img src="/images/Penningtons-Manches-Cooper-Logo.png" class="h-20" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="relative z-10 mt-10 text-center">
+            <a
+              href="#"
+              class="inline-flex items-center gap-2 rounded-xl border border-primary/30 bg-primary/10 px-5 py-2 text-sm font-semibold text-primary hover:bg-primary/20 transition"
+            >
+              Read customer stories
+              <span aria-hidden>→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+          
+
+      <!-- Products & Services -->
+      <section id="services" class="mx-auto max-w-6xl px-4 pt-10 pb-12 md:pt-14">
+        <div class="text-center reveal">
+          <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Product and services</h2>
+          <p class="mt-2 text-white/70 max-w-2xl mx-auto">
+            Choose from a subscription to a data platform, access our advisory services or plug Beauhurst data straight into your systems with our API.
+          </p>
+        </div>
+
+        <!-- Top  (4 cards) -->
+        <div class="mt-8 grid gap-4 md:grid-cols-4 reveal">
+          <!-- Impact -->
+          <article class="glass-soft rounded-2xl p-6 shadow-soft hover:bg-white/10 transition flex flex-col">
+            <div class="h-1 w-full rounded-full bg-impact/80 mb-5"></div>
+            <div class="flex items-center gap-3">
+              <div class="h-10 w-10 rounded-xl bg-white/10 border border-white/10 grid place-items-center"><i class="fa-solid fa-map text-2xl text-blue-500"></i></div>
+              <h3 class="font-semibold text-lg">Beauhurst<span class="text-impact">Impact</span></h3>
+            </div>
+            <p class="mt-4 text-sm text-white/70">
+              Access insights, create an impact and measure its success.
+            </p>
+            <ul class="my-4 space-y-2 text-sm text-white/75">
+              <li class="flex gap-2"><span class="text-teal">✓</span> Universities</li>
+              <li class="flex gap-2"><span class="text-teal">✓</span> Councils</li>
+              <li class="flex gap-2"><span class="text-teal">✓</span> Government bodies</li>
+            </ul>
+            <a href="#" class="mt-auto inline-flex w-full h-10 items-center justify-center rounded-xl bg-impact/90 hover:bg-impact text-white font-semibold px-4 py-2.5 transition">
+              Unlock insights
+            </a>
+          </article>
+
+          <!-- Invest -->
+          <article class="glass-soft rounded-2xl p-6 shadow-soft hover:bg-white/10 transition flex flex-col">
+            <div class="h-1 w-full rounded-full bg-invest/80 mb-5"></div>
+            <div class="flex items-center gap-3">
+              <div class="h-10 w-10 rounded-xl bg-white/10 border border-white/10 grid place-items-center"><i class="fa-solid fa-chart-line text-2xl text-green-500"></i></div>
+              <h3 class="font-semibold text-lg">Beauhurst<span class="text-invest">Invest</span></h3>
+            </div>
+            <p class="mt-4 text-sm text-white/70">
+              The data needed to identify opportunities, analyse trends and build relationships.
+            </p>
+            <ul class="my-4 space-y-2 text-sm text-white/75">
+              <li class="flex gap-2"><span class="text-teal">✓</span> Investors</li>
+              <li class="flex gap-2"><span class="text-teal">✓</span> Accelerators</li>
+            </ul>
+            <a href="#" class="mt-auto inline-flex w-full h-10 items-center justify-center rounded-xl bg-invest/90 hover:bg-invest text-white font-semibold px-4 py-2.5 transition">
+              Accelerate returns
+            </a>
+          </article>
+
+          <!-- Advise -->
+          <article class="glass-soft rounded-2xl p-6 shadow-soft hover:bg-white/10 transition flex flex-col">
+            <div class="h-1 w-full rounded-full bg-advise/80 mb-5"></div>
+            <div class="flex items-center gap-3">
+              <div class="h-10 w-10 rounded-xl bg-white/10 border border-white/10 grid place-items-center"><i class="fa-solid fa-book text-2xl text-advise-500"></i></div>
+              <h3 class="font-semibold text-lg">Beauhurst<span class="text-advise">Advise</span></h3>
+            </div>
+            <p class="mt-4 text-sm text-white/70">
+              Source new clients and advise existing clientele.
+            </p>
+            <ul class="my-4 space-y-2 text-sm text-white/75">
+              <li class="flex gap-2"><span class="text-teal">✓</span> Financial</li>
+              <li class="flex gap-2"><span class="text-teal">✓</span> Legal</li>
+              <li class="flex gap-2"><span class="text-teal">✓</span> Professional services</li>
+            </ul>
+            <a href="#" class="mt-auto inline-flex w-full h-10 items-center justify-center rounded-xl bg-advise/90 hover:bg-advise text-white font-semibold px-4 py-2.5 transition">
+              Achieve growth
+            </a>
+          </article>
+
+          <!-- Sales -->
+          <article class="glass-soft rounded-2xl p-6 shadow-soft hover:bg-white/10 transition flex flex-col">
+            <div class="h-1 w-full rounded-full bg-sales/80 mb-5"></div>
+            <div class="flex items-center gap-3">
+              <div class="h-10 w-10 rounded-xl bg-white/10 border border-white/10 grid place-items-center"><i class="fa-solid fa-bullseye text-2xl text-red-500"></i></div>
+              <h3 class="font-semibold text-lg">Beauhurst<span class="text-sales">Sales</span></h3>
+            </div>
+            <p class="my-4 text-sm text-white/70">
+              Find and win high-quality clients with data-backed insights.
+            </p>
+            <ul class="mt-4 space-y-2 text-sm text-white/75">
+              <li class="flex gap-2"><span class="text-teal">✓</span> Sales teams</li>
+              <li class="flex gap-2"><span class="text-teal">✓</span> Recruiters</li>
+            </ul>
+            <a href="#" class="mt-auto inline-flex w-full h-10 justify-center rounded-xl bg-sales/90 hover:bg-sales text-white font-semibold items-center px-4 py-2.5 transition">
+              Hit your targets
+            </a>
+          </article>
+        </div>
+
+        <!-- Bottom row (2 wide cards) -->
+        <div class="mt-4 grid gap-4 md:grid-cols-2 reveal">
+          <article class="glass-soft rounded-2xl p-6 shadow-soft hover:bg-white/10 transition">
+            <h3 class="font-semibold text-lg">Research &amp; Consultancy</h3>
+            <p class="mt-3 text-sm text-white/70 max-w-md">
+              Use data beyond the platforms with the help of powerful data-driven research and bespoke advisory services.
+            </p>
+            <a href="#" class="mt-6 inline-flex rounded-xl bg-amber/90 hover:bg-amber text-ink font-semibold px-5 py-2.5 transition">
+              Access insights
+            </a>
+          </article>
+
+          <article class="glass-soft rounded-2xl p-6 shadow-soft hover:bg-white/10 transition">
+            <h3 class="font-semibold text-lg">API</h3>
+            <p class="mt-3 text-sm text-white/70 max-w-md">
+              Plug our data directly into your systems and stay up to date, automatically, with our API.
+            </p>
+            <a href="#" class="mt-6 inline-flex rounded-xl bg-amber/90 hover:bg-amber text-ink font-semibold px-5 py-2.5 transition">
+              Start integrating
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <!-- Why Beauhurst section-->
+      <section id="proof" class="mx-auto max-w-6xl px-4 pb-12">
+        <div class="glass rounded-2xl p-6 md:p-8 reveal">
+          <div class="text-center">
+            <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Why choose Beauhurst?</h2>
+            <p class="mt-2 text-white/70">Every company. Every update. Every day.</p>
+          </div>
+
+          <div class="mt-8 grid gap-4 md:grid-cols-3">
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-5 reveal">
+                <p class="text-3xl font-semibold tracking-tight">
+                    <span class="countup" data-target="30000">10000</span>
+                    <span class="text-white/80">+</span>
+                </p>
+                <p class="mt-1 text-sm text-white/70">Active companies tracked</p>
+            </div>
+
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-5 reveal">
+                <p class="text-3xl font-semibold tracking-tight">
+                    <span class="countup" data-target="1000">1000</span>
+                    <span class="text-white/80">+</span>
+                </p>
+                <p class="mt-1 text-sm text-white/70">Verified updates every day</p>
+            </div>
+
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-5 reveal">
+              <div class="flex items-center gap-3">
+                <div class="h-11 w-11 rounded-2xl bg-white/10 border border-white/10 grid place-items-center"><i class="fa-solid fa-bolt text-2xl text-purple-500"></i></div>
+                <div>
+                  <p class="font-semibold">Powerful insight lenses</p>
+                  <p class="text-sm text-white/70">Instant analysis from trusted data.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Blogs -->
+      <section id="resources" class="mx-auto max-w-6xl px-4 pb-14">
+        <div class="text-center reveal">
+          <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Keep exploring</h2>
+          <p class="mt-2 text-white/70">Insights, guides, and updates that help you move faster.</p>
+        </div>
+
+        <div class="mt-8 grid gap-4 md:grid-cols-3">
+          <article class="reveal glass-soft rounded-2xl bg-white overflow-hidden hover:bg-white/80 transition shadow-soft">
+            <div class="h-36 overflow-hidden">
+                <img src="/images/blog_image_1.webp" alt="Top sectors to watch" class="h-full w-full object-cover" loading="lazy"/>
+            </div>
+            <div class="p-5 text-black">
+              <p class="text-xs text-black/80">Insights</p>
+              <h3 class="mt-1 font-semibold">Top sectors to watch this year</h3>
+              <a href="#" class="mt-3 inline-flex text-sm font-semibold text-primary hover:underline">Learn more →</a>
+            </div>
+          </article>
+
+          <article class="reveal glass-soft rounded-2xl bg-white overflow-hidden hover:bg-white/80 transition shadow-soft">
+            <div class="h-36 overflow-hidden">
+                <img src="/images/blog_image_2.webp" alt="How to track university spinouts" class="h-full w-full object-cover" loading="lazy" />
+            </div>
+            <div class="p-5 text-black">
+              <p class="text-xs text-black/80">Guide</p>
+              <h3 class="mt-1 font-semibold">How to track university spinouts</h3>
+              <a href="#" class="mt-3 inline-flex text-sm font-semibold text-primary hover:underline">Learn more →</a>
+            </div>
+          </article>
+
+          <article class="reveal glass-soft rounded-2xl bg-white overflow-hidden hover:bg-white/80 transition shadow-soft">
+            <div class="h-36 overflow-hidden">
+                <img src="/images/blog_image_3.webp" alt="New signals for faster prospecting" class="h-full w-full object-cover" loading="lazy" />
+            </div>
+            <div class="p-5 text-black">
+              <p class="text-xs text-black/80">Product updates</p>
+              <h3 class="mt-1 font-semibold">New signals for faster prospecting</h3>
+              <a href="#" class="mt-3 inline-flex text-sm font-semibold text-primary hover:underline">Learn more →</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- final CTA -->
+      <section id="demo" class="mx-auto max-w-6xl px-4 pb-10">
+        <div class="glass rounded-2xl p-6 md:p-10 text-center reveal">
+          <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">See Beauhurst on your use case</h2>
+          <p class="mt-2 text-white/70">Tailored walkthrough in minutes — choose self-serve or guided.</p>
+
+          <div class="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
+            <a href="#" class="inline-flex w-full sm:w-auto items-center justify-center rounded-xl bg-primary px-6 py-3 text-sm font-semibold shadow-button hover:bg-primary-hover transition active:scale-[0.98]">
+              Book a demo
+            </a>
+            <a href="#tours" class="inline-flex w-full sm:w-auto items-center justify-center rounded-xl border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white/90 hover:bg-white/10 transition active:scale-[0.98]">
+              Take a tour
+            </a>
+          </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="mt-10 border-t border-white/10 pt-10 pb-12 text-sm text-white/60">
+            <div class="mx-auto max-w-6xl px-4 grid gap-8 md:grid-cols-4">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <span class="h-8 w-auto flex items-center justify-center">
+                            <image src="/images/Beauhurst_logo.webp" alt="company logo" class="h-full object-contain" />
+                        </span>
+                    </div>
+                    <p class="text-xs text-white/50 max-w-xs">
+                        Verified private company intelligence for investment, sales, policy, and innovation teams.
+                    </p>
+                </div>
+
+                <div>
+                <h4 class="font-semibold text-white mb-3">Products</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-white">Impact</a></li>
+                    <li><a href="#" class="hover:text-white">Invest</a></li>
+                    <li><a href="#" class="hover:text-white">Advise</a></li>
+                    <li><a href="#" class="hover:text-white">Sales</a></li>
+                </ul>
+                </div>
+
+                <div>
+                <h4 class="font-semibold text-white mb-3">Company</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-white">About</a></li>
+                    <li><a href="#" class="hover:text-white">Careers</a></li>
+                    <li><a href="#" class="hover:text-white">Resources</a></li>
+                    <li><a href="#" class="hover:text-white">Contact</a></li>
+                </ul>
+                </div>
+
+                <div>
+                <h4 class="font-semibold text-white mb-3">Get started</h4>
+                <a href="#demo"
+                    class="inline-flex items-center justify-center rounded-xl bg-primary px-4 py-2 text-sm font-semibold shadow-button hover:bg-primary-hover transition">
+                    Book a demo
+                </a>
+                </div>
+
+            </div>
+
+            <div class="mt-10 text-center text-xs text-white/40">
+                © <span id="year"></span> Beauhurst. All rights reserved.
+            </div>
+        </footer>
+      </main>
+      <script src="./app.js"></script>
+    </body>
+  </html> 
