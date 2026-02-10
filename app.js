@@ -74,6 +74,34 @@ function escapeHtml(str) {
 }
 
 
+// const modal = $("#tourModal");
+// const modalTitle = $("#modalTitle");
+// const modalDesc = $("#modalDesc");
+// const modalVideo = $("#modalVideo");
+// const modalDuration = $("#modalDuration");
+// const closeModalBtn = $("#closeTourModal");
+
+// function openTourModal(tour) {
+//   modalTitle.textContent = tour.title;
+//   modalDesc.textContent = tour.desc;
+//   modalDuration.textContent = `${tour.minutes} min tour`;
+//   modalVideo.src = tour.video || "";
+//   modal.classList.remove("hidden");
+//   modal.classList.add("flex");
+// }
+
+// function closeTourModal() {
+//   modal.classList.add("hidden");
+//   modal.classList.remove("flex");
+//   modalVideo.src = ""; // stop playback
+// }
+
+// closeModalBtn.addEventListener("click", closeTourModal);
+// modal.addEventListener("click", (e) => {
+//   if (e.target === modal) closeTourModal();
+// });
+
+
 //Render persona buttons
 function renderPersonas() {
   const grid = $("#personaRow");
@@ -121,6 +149,18 @@ function renderPersonas() {
     grid.appendChild(btn);
   });
 }
+
+
+// tours
+tours: [
+  {
+    title: "Find New Leads",
+    desc: "Discover and target prospects",
+    minutes: 2,
+    icon: "fa-search",
+    video: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+  },
+]
 
 
 // Render tours
@@ -172,12 +212,12 @@ function renderTours(animateSwap = false) {
         </div>
 
         <div class="mt-5 flex items-center justify-between">
-          <a
-            href="#"
-            class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-4 py-2 text-sm font-semibold shadow-glow hover:bg-primary-hover transition"
+          <button
+            class="start-tour inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-4 py-2 text-sm font-semibold shadow-glow hover:bg-primary-hover transition"
           >
             Start Tour <span aria-hidden="true">›</span>
-          </a>
+          </button>
+
 
           <span class="text-xs text-white/50">Recommended</span>
         </div>
@@ -189,6 +229,10 @@ function renderTours(animateSwap = false) {
     `;
 
     grid.appendChild(card);
+
+    const startBtn = card.querySelector(".start-tour");
+    startBtn.addEventListener("click", () => openTourModal(t));
+
   });
 }
 

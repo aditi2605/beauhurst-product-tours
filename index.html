@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Beauhurst</title>
+    <title>SignalForge — Private Company Intelligence</title>
 
     <!-- Lucide Icons -->
      <script src="https://unpkg.com/lucide@latest"></script>
@@ -130,21 +130,29 @@
   </head>
 
   <body class="h-full bg-[#050814] text-white font-sans">
-
+   
     <!-- Hero Backdrop-->
     <div class="relative overflow-hidden">
+      
       <div class="absolute inset-0">
-        <div class="absolute inset-0 bg-gradient-to-b from-[#0B1028] via-[#070A14] to-[#050814]"></div>
-        <div class="halo"></div>
-        <div class="stars"></div>
+        <!-- gradient FIRST -->
+        <div class="absolute inset-0 bg-gradient-to-b from-[#0B1028]/80 via-[#070A14]/70 to-[#050814]"></div>
 
-        <!-- Subtle abstract block -->
-        <div class="absolute right-[-120px] top-[-40px] h-[520px] w-[520px] opacity-35 blur-[0.5px]"
-             style="background:
-               linear-gradient(to bottom, rgba(255,255,255,0.08), transparent 70%),
-               radial-gradient(closest-side, rgba(109,94,246,0.20), transparent 60%); border-radius: 28px;">
-        </div>
+        <!-- image ABOVE gradient -->
+        <!-- <div
+          class="absolute right-[-80px] top-[-160px] h-[1100px] w-[2700px] z-100"
+          style="
+            background-image: url('/images/SignalForge_bg_img.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+          "
+        ></div> -->
+
+        <div class="halo z-0"></div>
+        <div class="stars z-0"></div>
       </div>
+
 
       <!-- Nav -->
       <header id="siteHeader" class="sticky top-0 z-50">
@@ -152,7 +160,8 @@
           <div id="navShell" class="glass rounded-2xl px-4 py-3 md:px-5 md:py-4 flex items-center justify-between transition">
             <div class="flex items-center gap-3">
               <div class="h-8 w-auto flex items-center justify-center">
-                <image src="/images/Beauhurst_logo.webp" alt="company logo" class="h-full object-contain" />
+                <h1 class="text-3xl text-gray-300">SignalForge</h1>
+                <!-- <image src="/images/Beauhurst_logo.webp" alt="company logo" class="h-full object-contain" /> -->
               </div>
             </div>
 
@@ -191,8 +200,9 @@
 
             <h1 class="mt-6 text-3xl md:text-5xl font-semibold tracking-tight">
               Private company intelligence
-              <span class="block text-white/90">for the UK &amp; Germany</span>
+              <span class="block text-white/90">you can actually act on</span>
             </h1>
+
 
             <p class="mx-auto mt-4 max-w-2xl text-base md:text-lg text-white/75">
               Find opportunities, track companies, and act faster with verified data.
@@ -216,6 +226,81 @@
               No hard sell — just a tailored walkthrough.
             </p>
           </div>
+
+          <!-- what we do -->
+           <section id="what-we-do" class="mx-auto max-w-6xl px-4 py-16 reveal">
+            <div class="text-center max-w-3xl mx-auto">
+              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">
+                What SignalForge does
+              </h2>
+              <p class="mt-4 text-white/70 text-base md:text-lg">
+                SignalForge is a searchable intelligence platform that tracks high-growth,
+                innovative private companies across the UK.
+                We turn raw company data into clear signals that help teams spot opportunities,
+                understand market movement, and act with confidence.
+              </p>
+            </div>
+
+            <div class="mt-10 grid gap-6 md:grid-cols-3">
+              <div class="glass-soft rounded-2xl p-6">
+                <h3 class="font-semibold text-lg mb-2">Track growth signals</h3>
+                <p class="text-sm text-white/70">
+                  Funding rounds, hiring trends, leadership changes, and expansion activity —
+                  all tracked and updated continuously.
+                </p>
+              </div>
+
+              <div class="glass-soft rounded-2xl p-6">
+                <h3 class="font-semibold text-lg mb-2">Understand private companies</h3>
+                <p class="text-sm text-white/70">
+                  Build a complete picture of private businesses using verified,
+                  structured data designed for research and decision-making.
+                </p>
+              </div>
+
+              <div class="glass-soft rounded-2xl p-6">
+                <h3 class="font-semibold text-lg mb-2">Move faster with confidence</h3>
+                <p class="text-sm text-white/70">
+                  Whether you’re investing, selling, advising, or shaping policy,
+                  SignalForge helps you focus on the companies that matter most.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- how it works -->
+           <section class="mx-auto max-w-6xl px-4 py-16 reveal">
+            <div class="text-center">
+              <h2 class="text-2xl md:text-3xl font-semibold">How it works</h2>
+            </div>
+
+            <div class="mt-10 grid gap-6 md:grid-cols-3">
+              <div class="glass-soft p-6 rounded-2xl">
+                <span class="text-primary font-semibold">01</span>
+                <h3 class="mt-2 font-semibold">Search & filter</h3>
+                <p class="text-sm text-white/70">
+                  Explore private companies using funding, growth signals, and sector filters.
+                </p>
+              </div>
+
+              <div class="glass-soft p-6 rounded-2xl">
+                <span class="text-primary font-semibold">02</span>
+                <h3 class="mt-2 font-semibold">Track signals</h3>
+                <p class="text-sm text-white/70">
+                  Monitor key updates like hiring spikes, fundraising, and leadership changes.
+                </p>
+              </div>
+
+              <div class="glass-soft p-6 rounded-2xl">
+                <span class="text-primary font-semibold">03</span>
+                <h3 class="mt-2 font-semibold">Take action</h3>
+                <p class="text-sm text-white/70">
+                  Build shortlists, export data, or hand off insights to your team.
+                </p>
+              </div>
+            </div>
+          </section>
+
 
           <!-- Persona selector -->
           <div class="mt-10 md:mt-12 glass rounded-2xl p-4 md:p-6 reveal">
@@ -319,7 +404,7 @@
         <div class="text-center reveal">
           <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Product and services</h2>
           <p class="mt-2 text-white/70 max-w-2xl mx-auto">
-            Choose from a subscription to a data platform, access our advisory services or plug Beauhurst data straight into your systems with our API.
+            Choose from a subscription to a data platform, access our advisory services or plug SignalForge data straight into your systems with our API.
           </p>
         </div>
 
@@ -330,7 +415,7 @@
             <div class="h-1 w-full rounded-full bg-impact/80 mb-5"></div>
             <div class="flex items-center gap-3">
               <div class="h-10 w-10 rounded-xl bg-white/10 border border-white/10 grid place-items-center"><i class="fa-solid fa-map text-2xl text-blue-500"></i></div>
-              <h3 class="font-semibold text-lg">Beauhurst<span class="text-impact">Impact</span></h3>
+              <h3 class="font-semibold text-lg">SignalForge <span class="text-impact">Impact</span></h3>
             </div>
             <p class="mt-4 text-sm text-white/70">
               Access insights, create an impact and measure its success.
@@ -350,7 +435,7 @@
             <div class="h-1 w-full rounded-full bg-invest/80 mb-5"></div>
             <div class="flex items-center gap-3">
               <div class="h-10 w-10 rounded-xl bg-white/10 border border-white/10 grid place-items-center"><i class="fa-solid fa-chart-line text-2xl text-green-500"></i></div>
-              <h3 class="font-semibold text-lg">Beauhurst<span class="text-invest">Invest</span></h3>
+              <h3 class="font-semibold text-lg">SignalForge <span class="text-invest">Invest</span></h3>
             </div>
             <p class="mt-4 text-sm text-white/70">
               The data needed to identify opportunities, analyse trends and build relationships.
@@ -369,7 +454,7 @@
             <div class="h-1 w-full rounded-full bg-advise/80 mb-5"></div>
             <div class="flex items-center gap-3">
               <div class="h-10 w-10 rounded-xl bg-white/10 border border-white/10 grid place-items-center"><i class="fa-solid fa-book text-2xl text-advise-500"></i></div>
-              <h3 class="font-semibold text-lg">Beauhurst<span class="text-advise">Advise</span></h3>
+              <h3 class="font-semibold text-lg">SignalForge <span class="text-advise">Advise</span></h3>
             </div>
             <p class="mt-4 text-sm text-white/70">
               Source new clients and advise existing clientele.
@@ -389,7 +474,7 @@
             <div class="h-1 w-full rounded-full bg-sales/80 mb-5"></div>
             <div class="flex items-center gap-3">
               <div class="h-10 w-10 rounded-xl bg-white/10 border border-white/10 grid place-items-center"><i class="fa-solid fa-bullseye text-2xl text-red-500"></i></div>
-              <h3 class="font-semibold text-lg">Beauhurst<span class="text-sales">Sales</span></h3>
+              <h3 class="font-semibold text-lg">SignalForge <span class="text-sales">Sales</span></h3>
             </div>
             <p class="my-4 text-sm text-white/70">
               Find and win high-quality clients with data-backed insights.
@@ -428,11 +513,11 @@
         </div>
       </section>
 
-      <!-- Why Beauhurst section-->
+      <!-- Why SignalForge section-->
       <section id="proof" class="mx-auto max-w-6xl px-4 pb-12">
         <div class="glass rounded-2xl p-6 md:p-8 reveal">
           <div class="text-center">
-            <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Why choose Beauhurst?</h2>
+            <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Why choose SignalForge?</h2>
             <p class="mt-2 text-white/70">Every company. Every update. Every day.</p>
           </div>
 
@@ -512,7 +597,7 @@
       <!-- final CTA -->
       <section id="demo" class="mx-auto max-w-6xl px-4 pb-10">
         <div class="glass rounded-2xl p-6 md:p-10 text-center reveal">
-          <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">See Beauhurst on your use case</h2>
+          <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">See SignalForge on your use case</h2>
           <p class="mt-2 text-white/70">Tailored walkthrough in minutes — choose self-serve or guided.</p>
 
           <div class="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -531,7 +616,8 @@
                 <div>
                     <div class="flex items-center mb-4">
                         <span class="h-8 w-auto flex items-center justify-center">
-                            <image src="/images/Beauhurst_logo.webp" alt="company logo" class="h-full object-contain" />
+                            <h1 class="text-3xl">SignalForge</h1>
+                            <!-- <image src="/images/Beauhurst_logo.webp" alt="company logo" class="h-full object-contain" /> -->
                         </span>
                     </div>
                     <p class="text-xs text-white/50 max-w-xs">
@@ -570,7 +656,7 @@
             </div>
 
             <div class="mt-10 text-center text-xs text-white/40">
-                © <span id="year"></span> Beauhurst. All rights reserved.
+              © <span id="year"></span> SignalForge. All rights reserved.
             </div>
         </footer>
       </main>
